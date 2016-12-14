@@ -89,23 +89,23 @@ CHECKS = [
 # Browsers
     'virtual-browser',
 # Version control
-    'git',
-    'hg',              # Command line tool
+    # 'git',
+    # 'hg',              # Command line tool
     #'mercurial',       # Python package
-    'EasyMercurial',
+    # 'EasyMercurial',
 # Build tools and packaging
-    'make',
+    # 'make',
     'virtual-pypi-installer',
     'setuptools',
     #'xcode',
-# Testing
-    'nosetests',       # Command line tool
-    'nose',            # Python package
-    'py.test',         # Command line tool
-    'pytest',          # Python package
-# SQL
-    'sqlite3',         # Command line tool
-    'sqlite3-python',  # Python package
+# # Testing
+#     'nosetests',       # Command line tool
+#     'nose',            # Python package
+#     'py.test',         # Command line tool
+#     'pytest',          # Python package
+# # SQL
+#     'sqlite3',         # Command line tool
+#     'sqlite3-python',  # Python package
 # Python
     'python',
     'ipython',         # Command line tool
@@ -115,6 +115,7 @@ CHECKS = [
     'scipy',
     'matplotlib',
     'pandas',
+    'statsmodels',
     #'sympy',
     #'Cython',
     #'networkx',
@@ -175,7 +176,9 @@ class DependencyError (Exception):
         ('*', '*', 'nosetests'): 'https://nose.readthedocs.org/en/latest/#installation-and-quick-start',
         ('*', '*', 'notepad++'): 'http://notepad-plus-plus.org/download/v6.3.html',
         ('*', '*', 'numpy'): 'http://docs.scipy.org/doc/numpy/user/install.html',
+        ('*', '*', 'numpy'): 'http://docs.scipy.org/doc/numpy/user/install.html',
         ('*', '*', 'pandas'): 'http://pandas.pydata.org/pandas-docs/stable/install.html',
+        ('*', '*', 'statsmodels'): 'http://statsmodels.sourceforge.net/install.html',
         ('*', '*', 'pip'): 'http://www.pip-installer.org/en/latest/installing.html',
         ('*', '*', 'pytest'): 'http://pytest.org/latest/getting-started.html',
         ('*', '*', 'python'): 'http://www.python.org/download/releases/2.7.3/#download',
@@ -884,6 +887,7 @@ for package,name,long_name,minimum_version,and_dependencies in [
         ('scipy', None, 'SciPy', None, None),
         ('matplotlib', None, 'Matplotlib', None, None),
         ('pandas', None, 'Pandas', (0, 8), None),
+        ('statsmodels', None, 'statsmodels', None, None),
         ('sympy', None, 'SymPy', None, None),
         ('Cython', None, None, None, None),
         ('networkx', None, 'NetworkX', None, None),
